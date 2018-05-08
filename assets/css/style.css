@@ -1,0 +1,38 @@
+.container-fluid{
+    background-color: #93B7BE;
+}
+
+.jumbotron{
+    text-align: center;
+    color: white;
+    background-color: #2D3047;
+
+}
+
+#searches{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #E0CA3C;
+}
+
+.rating{
+    text-align: center;
+}
+
+.btn{
+    background-color: #048A81;
+}
+
+.button{
+  margin: 13px;
+}
+
+#gifButtons{
+    background-color: #A799B7;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 10px;
+   
+}

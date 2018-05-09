@@ -1,9 +1,11 @@
-var topics = ["Forest", "Lava", "Northern Lights", "Ocean", "Snow",
-    "Sunrise", "Sunset", "Waterfall", "Cave", "Rainbow"];
 
 $(document).ready(function () {
     populateButtons(topics, "searchButton", "#gifButtons")
 })
+
+var topics = ["Forest", "Lava", "Northern Lights", "Ocean", "Snow",
+    "Sunrise", "Sunset", "Waterfall", "Cave", "Rainbow"];
+
 
 function populateButtons(topics, classToAdd, areaToAddTo) {
     $(areaToAddTo).empty();
@@ -29,6 +31,7 @@ $(document).on("click", ".searchButton", function () {
         for (var i = 0; i < response.data.length; i++) {
             var searchDiv = $('<div class="search-item">');
             var rating = response.data[i].rating;
+            var p = $('<p>').text('Rating: ' + rating);
             var animated = response.data[i].images.fixed_height.url;
             var still = response.data[i].images.fixed_height_still.url;
             var image = $("<img>");
@@ -37,7 +40,7 @@ $(document).on("click", ".searchButton", function () {
             image.attr("data-animated", animated);
             image.attr("data-state", "still");
             image.addClass("searchImage");
-            searchDiv.append(rating);
+            searchDiv.append(p);
             searchDiv.append(image);
             $("#searches").append(searchDiv);
         }
@@ -55,10 +58,20 @@ $(document).on("click", ".searchImage", function () {
     }
 })
 
+//Add new buttons from search
 $("#addSearch").on("click", function () {
     var newTopics = $("input").eq(0).val();
     topics.push(newTopics);
-    populateButtons(topics, ".searchButton", "#gifButton");
+    populateButtons(topics, "searchButton", "#gifButtons");
     return false;
 })
+
+
+
+
+
+
+
+
+
 

@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     populateButtons(topics, "searchButton", "#gifButtons")
 })
@@ -59,13 +58,17 @@ $(document).on("click", ".searchImage", function () {
 })
 
 //Add new buttons from search
+//jQuery selection contains all of the <addSearch> elements
+//.on() method is used to handle all events and has two parameters
+//First, the event that you want to respond to. In this case, click event.
+//Second, code you want to run when event occurs. In this case, anonymous function.
 $("#addSearch").on("click", function () {
-    var newTopics = $("input").eq(0).val();
+    event.preventDefault();
+    var newTopics = $("input").eq(0).val(event);
     topics.push(newTopics);
     populateButtons(topics, "searchButton", "#gifButtons");
     return false;
 })
-
 
 
 

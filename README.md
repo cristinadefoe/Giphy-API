@@ -1,4 +1,4 @@
-# Giphy-API: APIs & AJAX Homework #6
+# Giphy-API
 
 The GIPHY API is used to create web page that populates a nature theme. Press any "Nature Themed" button. This results in 10 giphy images being displayed on the screen. By clicking on the images you can either animate or still the image. In addition, the user can request an additional 10 gifs to be added to the page without overwriting the existing gifs; when the button is clicked it creates the gifs. 
 
@@ -8,9 +8,8 @@ The GIPHY API is used to create web page that populates a nature theme. Press an
 
 ## Built With
 
-* Visual Studio Code (https://code.visualstudio.com) - Text editor
-* HTML - Provide structure of website
-* CSS - Styling of webpage
+* HTML 
+* CSS 
 * Bootstrap (https://getbootstrap.com) - Web framework used
 * Javascript 
 * Jquery (https://jquery.com) - Library used
